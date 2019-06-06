@@ -6,6 +6,8 @@ echo "That being said, would you like to conitnue? (y/n)"
 read resp
 if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 	sudo apt update && apt upgrade
+    sudo apt install zsh
+    
 	echo "Setup complete"
 else
 	echo "Setup script cancelled by user"

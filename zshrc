@@ -9,6 +9,18 @@ else
     HOMEBASE=$HOME
 fi
 
+### Check the OS before installing
+# If the OS is my mac
+if [[ $OSTYPE == darwin* ]]; then
+	export GOPATH=$BASE/programming/go
+
+    # path
+    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+else
+    ## linux specific 
+    export GOPATH=$BASE/Projects/programming/go
+fi
+
 # dotfiles directory
 export DOTFILES=$HOMEBASE/dotfiles
 
