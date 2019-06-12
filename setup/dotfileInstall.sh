@@ -12,7 +12,7 @@ dir=~/dotfiles		# directory where dotfiles will live
 olddir=~/old_dotfiles	# Where all the old dotfiles are banished to
 
 # all of the files or folders that will be symlinked to the home directory
-dotfiles="zshrc functions aliases"
+dotfiles="zshrc vimrc functions aliases asciiart"
 
 # Folders that will go to ./config/
 # configFiles=""

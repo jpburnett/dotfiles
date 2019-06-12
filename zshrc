@@ -18,6 +18,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 else
     ## linux specific 
+    # Set GOPATH
     export GOPATH=$BASE/Projects/programming/go
 fi
 
@@ -49,4 +50,6 @@ antigen apply
 # add any aliases
 [ -f $BASE/.aliases ] && source $BASE/.aliases
 
-
+### Paths
+# Go
+export PATH=$GOPATH/bin:$PATH
