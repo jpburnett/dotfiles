@@ -1,3 +1,7 @@
 alias ..="cd .."    #quick directory navigation
 alias gin="go run *.go" #start up go server
 alias whatsnew="sudo apt update && sudo apt upgrade"
+
+
+# Git stuff
+alias gs="git status"
