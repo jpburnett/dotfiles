@@ -59,9 +59,6 @@ inoremap ieee<space> <C-o>:GoIfErr<CR>
 :call NumberToggle()
 set pastetoggle=<F2>
 
-set swapfile
-set dir=~/.vim/swapfiles
-
 let g:go_highlight_structs = 1 
 let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
