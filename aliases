@@ -4,4 +4,4 @@ alias whatsnew="sudo apt update && sudo apt upgrade"
 
 
 # Git stuff
-alias gs="git status"
+alias gstat="git status"

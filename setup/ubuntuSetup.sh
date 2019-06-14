@@ -28,8 +28,12 @@ if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
     echo -e $installMsg"installing ssh"$none
     sudo apt install openssh-server
 
-    echo -e $installMsg"git"$none
+    echo -e $installMsg"installing git"$none
     sudo apt install git
+
+    echo -e $installMsg"installing vim-plug"$none
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	echo "Setup complete"
 else
