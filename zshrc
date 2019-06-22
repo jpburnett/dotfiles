@@ -2,33 +2,28 @@
 
 export TERM="xterm-256color"
 
-# Check if directory is home
-if [[ $UID == 0 ]]; then
-    HOMEBASE=/home/parker
-else
-    HOMEBASE=$HOME
-fi
+# Homebase
+BASE=$HOME
 
-### Check the OS before installing
-# If the OS is my mac
+# Location of Dotfiles
+export DOTFILES=$BASE/dotfiles
+
+# Specific Configuration Settings
+
+## Check to see if its a mac
 if [[ $OSTYPE == darwin* ]]; then
-	export GOPATH=$BASE/programming/go
+    export GOPATH=$BASE/projects/go
 
-    # path
+    #set the path
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 else
-    ## linux specific 
-    # Set GOPATH
+    ## Stuff For linux
     export GOPATH=$BASE/Projects/programming/go
 fi
 
-# dotfiles directory
-export DOTFILES=$HOMEBASE/dotfiles
-
-
 #### Antigen Configurations ####
-
-source $DOTFILES/zsh/antigen/antigen.zsh
+# path to zsh-antigen
+source $DOTFILES/zsh/antigen.zsh
 
 # oh-my-zsh plugins
 antigen use oh-my-zsh

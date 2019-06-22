@@ -17,7 +17,12 @@ echo "That being said, would you like to conitnue? (y/n)"
 read resp
 if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 	sudo apt update && apt upgrade
-    
+
+    echo -e $installMsg "Making projects and dotfile directories"$none
+    mkdir Projects
+    mkdir dotfiles
+    echo "done"
+
     # the -e means escape characters used, just fyi
     echo -e $installMsg"installing zsh"$none
     sudo apt install zsh
@@ -35,7 +40,23 @@ if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+    echo -e $installMsg"installing antigen (zsh)"
+
 	echo "Setup complete"
 else
 	echo -e $userExit"Setup script cancelled by user"$none
 fi
+
+
+
+install_antigen () {
+    echo "Starting Antigen Process..."
+    echo "Navigating to dotfiles directory"
+    echo "Making zsh directory"
+    mkdir zsh
+    echo $installMsg"Installing zsh-antigen..."$none
+    curl -L git.io/antigen > antigen.zsh
+    echo "Done, returning to home directory"
+    cd $HOME 
+
+}
