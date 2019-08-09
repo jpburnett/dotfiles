@@ -47,4 +47,4 @@ antigen apply
 
 ### Paths
 # Go
-export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin

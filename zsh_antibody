@@ -1,0 +1,52 @@
+# get to the home path
+
+export TERM="xterm-256color"
+
+# Homebase
+BASE=$HOME
+
+# Location of Dotfiles
+export DOTFILES=$BASE/dotfiles
+
+# Specific Configuration Settings
+
+## Check to see if its a mac
+if [[ $OSTYPE == darwin* ]]; then
+    export GOPATH=$BASE/go
+
+    #set the path
+    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+else
+    ## Stuff For linux
+    export GOPATH=$BASE/Projects/programming/go
+fi
+
+#### Antibody Configurations ####
+source <(antibody init)
+
+# oh-my-zsh plugins
+antibody bundle robbyrussell/oh-my-zsh path:lib
+antibody bundle robbyrussell/oh-my-zsh path:themes/robbyrussell.zsh-theme 
+antibody bundle robbyrussell/oh-my-zsh path:plugins/wd
+antibody bundle robbyrussell/oh-my-zsh path:plugins/git
+
+# other bundles
+antibody bundle zsh-users/zsh-completions
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-history-substring-search
+
+# ZSH Theme (Minimalist spaceship, because...space?)
+antibody bundle denysdovhan/spaceship-prompt
+
+#### End Antibody Stuff ####
+
+# add any aliases
+[ -f $BASE/.aliases ] && source $BASE/.aliases
+
+### Paths
+# Go
+export PATH=$PATH:/usr/local/go/bin
+
+export NVM_DIR="/home/parker/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -16,6 +16,17 @@ function printAscii() {
 	$(shuf -n1 -e "${allowedLogos[@]}")
 }
 
+function getTermWidth() {
+	echo $(tput cols)
+}
+
+function getLogoMaxWidth() {
+	printf '%s\n' "$1" | awk -v max=-1 '
+  {l = length}
+  l > max {max = l; output = max RS}
+  END {if (max >= 0) printf "%s", output}'
+}
+
 # Boop
 function sombra() {
 	echo $fg[magenta] "
