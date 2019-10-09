@@ -6,12 +6,18 @@ set number              " show line numbers
 colorscheme koehler
 
 
-" =========== TABS AND SPACES =================
+" =========== TABS AND SPACES ==================
 " set custom tab width
 set shiftwidth=4
 set softtabstop=4	 " Number of spaces in tab when editing
 set tabstop=4 	" Number of visual spaces per tab 
 set expandtab	" Tabs are spaces
+
+
+" ============= Indentation ====================
+set autoindent          " Auto indenting line....I hope?
+set smartindent         " indent or dedent (undent?) based on set rules
+set cindent             " Identing for c programs
 
 call plug#begin('~/.vim/plugged') 
 Plug 'fatih/vim-go'
