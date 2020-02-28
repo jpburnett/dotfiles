@@ -7,7 +7,6 @@ export TERM="xterm-color"
 # -------Aliases to Make Life Better-------------
 alias pull-all='find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull \;'
 alias brewski="brew update && brew upgrade && brew cleanup"
-alias cdcontrol="cd $HOME/Documents/BYU/Winter\ 2019/ECEn\ 483\ Controls"
 alias cddev="cd $HOME/Documents/github"
 alias gin="go run *.go" #start up go server
 alias gstat="git status"
