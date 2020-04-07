@@ -21,6 +21,7 @@ I tried Antibody, still impartial to it, didn't quite get it to work like Antige
 
 ## This is for my mac stuff
 Eventually I'll make a separate script to run on a mac.
+
 Make sure to install homebrew, run (for further questions consult their site):
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -28,3 +29,5 @@ Make sure to install homebrew, run (for further questions consult their site):
 to install and run sshpass you need to run:
 
 `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
+
+for vimrc, make sure vim-plug is installed correctly or it will brick vim.
