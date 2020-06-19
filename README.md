@@ -27,3 +27,5 @@ to install and run sshpass you need to run:
 `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
 
 for vimrc, make sure vim-plug is installed correctly or it will brick vim.
+
+for YouCompleteMe if the server doesn't respond do the following: `apt-get install python3-dev cmake`
